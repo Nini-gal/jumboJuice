@@ -16,50 +16,30 @@ public class monthlyPhoneBill{
             double salary = sc.nextDouble();
             int minutes = sc.nextInt();
 
-            PhoneBill emp = new PhoneBill(name, staffNo, salary, minutes);
-            empList.add(emp);
+            empList.add(new PhoneBill(name, staffNo, salary, minutes));
 
             System.out.println("Enter more data (yes/no):");
             moreData = sc.nextBoolean();
         }
         
         //b) Display the phone bill information with the highest amount
-        PhoneBill highestBill = empList.get(0);
+        double  highestBill; 
+        double bill = 0;
+        PhoneBill objectHighestPB = null;
         for(PhoneBill emp : empList){//loop through the list to find the highest bill
-            if(emp.getMinutes() > highestBill.getMinutes()){
-                highestBill = emp;
+            bill = emp.calcPhoneBill();
+            if(bill > highestBill){
+                highestBill = bill;
+                objectHighestPB = emp;
             }
         }
+        objectHighestPB.printInfo();
 
-        System.out.println("Highest Phone Bill:");
-        System.out.println("Name: " + highestBill.getName());
-        System.out.println("Staff No: " + highestBill.getStaffNo());
-        System.out.println("Salary: " + highestBill.getSalary());
-        System.out.println("Minutes: " + highestBill.getMinutes());
 
         //c)find and display the monthly salary for each sales representatives if the company decided to automatically deduct the phone bill from the monthly salary.
-        for(PhoneBill emp : empList){
-            int num;
-            double cent;
-            if(emp.getMinutes() > 100){
-                num = emp.getMinutes() / 100;
-                cent = 0.20;
-            }else if( emp.getMinutes() > 150){
-                num = emp.getMinutes() / 150;
-                cent = 0.35;
-            }else if(emp.getMinutes() < 100 && emp.getMinutes() < 50){
-                num = emp.getMinutes() / 50;
-                cent = 0.15;
-            }
-            double newSalary = emp.getSalary() - (num * cent);
-            emp.setNewSalary(newSalary);
-        }
-
         //display the new salary for each sales representatives
-        System.out.println("New Salary for each sales representatives:");
         for(PhoneBill emp : empList){
-            System.out.println("Name: " + emp.getName() + ", Staff No: "
-            + emp.getStaffNo() + ", New Salary: " + emp.getNewSalary());
+            System.out.println(empList.printInfo());
         }
 
         sc.close();

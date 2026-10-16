@@ -1,52 +1,66 @@
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.utl.ArrayList;
-import java.util.List;
 
 class Student{
 	String name;
 	String matric;
 	String course;
-	double cgpa
+	double cgpa;
 	String status;
 
-	Student(String name, String matric, String course, double cgoa, String status){
+	Student(String n, String m, String c, double cg, String s){
+        name = n;
+        matric = m;
+        course = c;
+        cgpa = cg;
+        status = s;
+    }
 
+    double getCGPA(){
+        return cgpa;
+    }
 
+    String getStatus(){
+        return status;
+    } 
+}
 
+public class Main{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Student> arrList = new ArrayList<>(100);
 
-public class tutorial{
-	public static void main(String[]args){
-		Scanner sc = new Scanner (System.in);
-		ArrayList<Student> arrList = new ArrayList<>();
+        for(int i=0 ; i<100 ; i++){
+            System.out.println("Enter data for student " +i+ "(Name, Matric, Course, Status): ");
 
-		for(int i = 0; i<100; i++){
-			System.out.println("Enter data for student " +i+ "(Name, Matric, Course, Status): ");
-
-			String name = sc.next();
-			String matric = sc.next();
-			String course = sc.next();
-			double cgpa = sc.nect();
-			String status = sc.next();
+			String name = sc.nextLine();
+			String matric = sc.nextLine();
+			String course = sc.nextLine();
+			double cgpa = sc.nextDouble();
+			String status = sc.nextLine();
 
 			Student anak = new Student(name,matric,course,cgpa,status);
 			arrList.add(anak);
-		}
+        }
 
-		double totalCgpa = 0;
-		for(int i = 0; i<100 ; i++){
-			totalCgpa += arrList.get(i).getCgpa();
-			double averageCgpa = totalCgpa / arrList.size();
-		}
+            //to make it simple arrList.add(new Student(name,matric,course,cgpa,status);)
+        double totalCgpa = 0;
+        for( Student anak : arrList){
+            totalCgpa += anak.getCGPA();
+            // 100 total
+        }
+        double averageCgpa = totalCgpa /100;
+        System.out.println("Average of student's cgpa : " + averageCgpa);
 
-		System.out.println("Average CGPA is " + averageCgpa);
-
-		int countKB2_9 = 0;
-		for(Student stu : arrList){
-			if(stu.etStatus().equaks("KB")){
-				if(stu.getCgpa() > 2.9){
+        int countKB2_9 = 0;
+		for(Student anak : arrList){
+			if(anak.getStatus().equals("KB")){
+				if(anak.getCGPA() > 2.9){
 					countKB2_9++;
 				}
 			}
 		}
 
-		Sytsm.out.println()
+        System.out.println("Number of student swith status KB and cgpa over 2.9: " + countKB2_9);
+    }
+}
