@@ -89,7 +89,7 @@ class LINKLIST {
     }
     }
 
-public class main{
+public class college{
     public static void main(String [] args){
         //linkedlist 
         LINKLIST list1 = new LINKLIST ();
