@@ -5,7 +5,7 @@ public class NumberApp {
     public static void main(String[] args){
         final int MAX = 10;
         String strnum;
-        ArrayList<arrList> numList = new ArrayList<>(100);
+        ArrayList<String> numList = new ArrayList<>(100);
 
         for(int i=0; i< MAX; i++){
             strnum = JOptionPane.showInputDialog("Input number: ");
