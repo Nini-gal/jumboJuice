@@ -1,0 +1,25 @@
+101;AirAsia;Kuala Lumpur;Singapore;1.20;On Time
+102;Malaysia Airlines;Kuala Lumpur;London;13.50;Delayed
+103;Batik Air;Kota Kinabalu;Kuala Lumpur;2.75;On Time
+104;AirAsia;Penang;Jakarta;1.90;Cancelled
+105;Malaysia Airlines;Kuala Lumpur;Tokyo;7.00;On Time
+106;Firefly;Kuala Lumpur;Kuching;1.65;On Time
+107;AirAsia;Kuala Lumpur;Bangkok;2.40;Delayed
+108;Malaysia Airlines;Kuala Lumpur;Sydney;8.50;On Time
+109;Batik Air;Johor Bahru;Kuala Lumpur;0.75;On Time
+110;AirAsia;Kota Kinabalu;Singapore;2.10;Cancelled
+111;Malaysia Airlines;Kuala Lumpur;Dubai;8.00;On Time
+112;Firefly;Kuala Lumpur;Langkawi;1.00;Delayed
+113;AirAsia;Kuala Lumpur;Bali;2.60;On Time
+114;Batik Air;Kuala Lumpur;Surabaya;2.20;On Time
+115;Malaysia Airlines;Kuala Lumpur;Mumbai;5.50;Cancelled
+116;AirAsia;Kuala Lumpur;Manila;3.40;On Time
+117;Firefly;Penang;Kuala Lumpur;0.90;On Time
+118;AirAsia;Kuala Lumpur;Ho Chi Minh City;1.85;Delayed
+119;Malaysia Airlines;Kuala Lumpur;Paris;12.80;On Time
+120;Batik Air;Kuala Lumpur;Taipei;4.70;On Time
+121;AirAsia;Johor Bahru;Singapore;0.50;On Time
+122;Malaysia Airlines;Kuala Lumpur;Beijing;6.30;Cancelled
+123;AirAsia;Kuala Lumpur;Seoul;6.60;On Time
+124;Batik Air;Kuala Lumpur;Jakarta;1.55;Delayed
+125;Firefly;Kota Kinabalu;Sandakan;0.45;On Time
