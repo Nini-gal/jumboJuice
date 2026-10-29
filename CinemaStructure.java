@@ -4,7 +4,7 @@ class CinemaStructure
     public int time;
     public int bookedseat;
 
-	public Cinema(String title, int time, int bookedseat){
+	public CinemaStructure(String title, int time, int bookedseat){
         title = t;
         time = h;
         bookedseat = bs;
